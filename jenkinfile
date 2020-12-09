@@ -1,14 +1,33 @@
 pipeline
 {
-	agent any
-	stages
-	{
-		stage('print hi')
-		{
-			steps
-			{
-				sh 'echo hi'
-			}
-		}
-	}
+agent any
+stages
+      { stage ('stage-1')
+       {    steps
+        {      sh 'echo downloading code'
+
+        } 
+       }
+	stage('stage-2')
+        { steps 
+           { sh 'echo compiling code'
+           }
+        }
+
+
+stage ('stage-3')
+
+        { steps
+          { sh 'echo building'
+          }
+        }
+
+
+     stage ('stage-4')
+
+        { steps
+          { sh 'echo deploy'
+          }
+        }
+      }
 }
