@@ -14,7 +14,7 @@ pipeline
               sh 'echo code is compiling'
           }
       }
-      stage ('code execution)
+      stage ('code execution')
       {
           steps
           {
