@@ -1,33 +1,30 @@
 pipeline
-{
-agent any
-stages
-      { stage ('stage-1')
-       {    steps
-        {      sh 'echo downloading code'
-
-        } 
-       }
-	stage('stage-2')
-        { steps 
-           { sh 'echo compiling code'
-           }
-        }
-
-
-stage ('stage-3')
-
-        { steps
-          { sh 'echo building'
-          }
-        }
-
-
-     stage ('stage-4')
-
-        { steps
-          { sh 'echo deploy'
-          }
-        }
+  agent any
+  stages
+  {
+      stage ('git clone')
+      {
+          steps
+          { sh 'echo downloading code'}
       }
-}
+      stage ('code compile')
+      {
+          steps
+          {
+              sh 'echo code is compiling'
+          }
+      }
+      stage ('code execution)
+      {
+          steps
+          {
+              sh 'echo code is executing'
+          }
+      }
+      stage (' code Build')
+      {
+          steps{
+              sh 'echo Build'
+          }
+      }
+  }
