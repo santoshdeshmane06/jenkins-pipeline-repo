@@ -24,7 +24,7 @@ pipeline{
       stage (' code Build')
       {
           steps{
-              sh 'echo Build'
+              echo 'Build'
           }
       }
   }
